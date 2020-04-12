@@ -16,6 +16,7 @@ namespace variant9123 {
 
     struct numbers {
         types num_type; // Тип объекта
+        std::string measure; // Единица измерения
     };
 
     // Считывание числа из файла

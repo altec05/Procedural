@@ -19,6 +19,8 @@ namespace variant9123 {
             std::cout << "Error has occurred while reading the file" << std::endl;
             return nullptr;
         }
+        ifstr.getline(data, 255); // Считываем строку
+        element->measure = std::string(data);
         return element;
     }
 

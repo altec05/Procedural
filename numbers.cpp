@@ -1,4 +1,5 @@
 #include "numbers.h"
+#include "polar_numbers.h"
 #include "complex_numbers.h"
 #include "fractional_numbers.h"
 namespace variant9123 {
@@ -14,6 +15,9 @@ namespace variant9123 {
         } else if (std::string(data) == "2") { // Если вводим дробь
             element = InFractional(ifstr); // Считываем дробное число и сохраняем указатель
             element->num_type = types::FRACTION;
+        } else if (std::string(data) == "3") { // Если вводим дробь
+            element = InPolar(ifstr); // Считываем полярное число и сохраняем указатель
+            element->num_type = types::POLAR;
         } else { // Если тип не найден
             delete element;
             std::cout << "Error has occurred while reading the file" << std::endl;

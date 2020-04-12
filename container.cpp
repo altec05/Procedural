@@ -41,6 +41,9 @@ namespace variant9123 {
                 case types::FRACTION:
                     OutFractional((fractional_numbers*)c.arr[i], ofstr);
                     break;
+                case types::POLAR:
+                    OutPolar((polar_numbers*)c.arr[i], ofstr);
+                    break;
             }
         }
         std::cout << "Writing is finished." << std::endl;

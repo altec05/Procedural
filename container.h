@@ -4,6 +4,7 @@
 
 #include "complex_numbers.h"
 #include "fractional_numbers.h"
+#include "polar_numbers.h"
 
 namespace variant9123 {
 

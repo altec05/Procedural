@@ -8,6 +8,7 @@ namespace variant9123 {
 
     // Структура дробных чисел
     struct polar_numbers {
+        types num_type; // Тип объекта
         double angle; // угол [радиан]
         int radius; // Расстояние до точки
     };

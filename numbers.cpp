@@ -22,4 +22,19 @@ namespace variant9123 {
         return element;
     }
 
+    double ToDouble(numbers *num) {
+        switch(num->num_type) {
+            case types::COMPLEX:
+                return ToDouble((complex_numbers*)num);
+            case types::FRACTION:
+                return ToDouble((fractional_numbers*)num);
+            default:
+                return 0;
+        }
+    }
+
+    bool Compare(numbers *num1, numbers *num2) {
+        return ToDouble(num1) > ToDouble(num2);
+    }
+
 }

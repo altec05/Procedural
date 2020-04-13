@@ -20,7 +20,8 @@ namespace variant9123 {
 
     // Считывание числа из файла
     numbers *In(std::ifstream &ifstr);
-
+    double ToDouble(numbers *num);
+    bool Compare(numbers *num1, numbers *num2);
 }
 
 #endif //NUMB_H

@@ -60,4 +60,16 @@ namespace variant9123 {
         }
     }
 
+    void Sort(numbers_array &c) {
+        for(int i = 0; i < c.len-1; i++) {
+            for(int j = i+1; j < c.len; j++) {
+                if (Compare(c.arr[i], c.arr[j])) {
+                    numbers* temp = c.arr[i];
+                    c.arr[i] = c.arr[j];
+                    c.arr[j] = temp;
+                }
+            }
+        }
+    }
+
 }

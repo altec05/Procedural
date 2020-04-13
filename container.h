@@ -23,6 +23,7 @@ namespace variant9123 {
     // Считывание и вывод всех чисел в контейнер
     void In(numbers_array &c, std::ifstream &ifstr);
     void Out(numbers_array &c, std::ofstream &ofstr);
+    void Sort(numbers_array &c);
 }
 
 #endif //CONT_H

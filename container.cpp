@@ -27,13 +27,15 @@ namespace variant9123 {
         }
     }
 
-    void Out(numbers_array &c, std::ofstream &ofstr) {
+    void Out(numbers_array &c, std::ofstream &ofstr, types ignore) {
         if(c.len == 0) {
             ofstr << "Container is empty. " << std::endl;
             return;
         }
         for(int i = 0; i < c.len; i++) {
             // Выводим элементы исходя из их типа
+            if(c.arr[i]->num_type == ignore) // Если нужно не выводить этот тип объектов
+                continue;
             switch(c.arr[i]->num_type) {
                 case types::COMPLEX:
                     OutComplex((complex_numbers*)c.arr[i], ofstr);
@@ -59,5 +61,6 @@ namespace variant9123 {
             }
         }
     }
+
 
 }

@@ -3,3 +3,6 @@
 [COMPLEX NUMBER = 123i+0]
 [COMPLEX NUMBER = 1.5i+0.005]
 [FRACTIONAL NUMBER = -12/5]
+----------No complex writing---------
+[FRACTIONAL NUMBER = -2/(-5)]
+[FRACTIONAL NUMBER = -12/5]

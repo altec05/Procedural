@@ -12,11 +12,19 @@ namespace variant9123 {
 
     void OutComplex(complex_numbers *complex, std::ofstream &ofstr) {
         ofstr << "[COMPLEX NUMBER = ";
+        ofstr << "(" << ToDouble(complex) << ") "; // Вывод числителя
         // Вывод комплексного числа в виде xi + y
         ofstr << complex->imaginary << "i"; // xi
         // Вывод действительного числа со знаком "+"
         if (complex->real >= 0) ofstr << "+" << complex->real << "]" << std::endl;
         else ofstr << complex->real << "]" << std::endl; // Со знаком "-"
+    }
+
+    // Приведение каждого значения к действительному числу, эквивалентному записанному.
+    // для комплексного числа - по формуле: sqrt(d^2+i^2)).
+
+    double ToDouble(complex_numbers *complex) {
+        return sqrt(complex->real*complex->real + complex->imaginary*complex->imaginary);
     }
 
 }

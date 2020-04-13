@@ -17,6 +17,7 @@ namespace variant9123 {
     // Считывание и вывод дробных чисел
     void OutFractional(fractional_numbers *fract, std::ofstream &ofstr);
     numbers *InFractional(std::ifstream &ifstr);
+    double ToDouble(fractional_numbers *fract);
 
 }
 

@@ -18,7 +18,7 @@ namespace variant9123 {
     // Считывание и вывод комплексных чисел
     void OutComplex(complex_numbers *complex, std::ofstream &ofstr);
     numbers *InComplex(std::ifstream &ifstr);
-
+    double ToDouble(complex_numbers *complex);
 }
 
 #endif //COMP_H

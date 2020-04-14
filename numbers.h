@@ -11,7 +11,8 @@ namespace variant9123 {
     // Перечисляемый тип
     enum types {
         COMPLEX = 1, //Комплексные числа
-        FRACTION = 2 // Простые дроби
+        FRACTION = 2, // Простые дроби
+        POLAR = 3 // Полярные координаты
     };
 
     struct numbers {

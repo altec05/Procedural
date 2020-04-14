@@ -9,6 +9,7 @@ namespace variant9123 {
     // Структура дробных чисел
     struct fractional_numbers {
         types num_type; // Тип объекта
+        std::string measure; // Единица измерения
         // Простые дроби (числитель, знаменатель – пара целых чисел)
         int numerator; // Числитель
         int denominator; // Знаменатель

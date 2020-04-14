@@ -16,8 +16,8 @@ namespace variant9123 {
         // Вывод комплексного числа в виде xi + y
         ofstr << complex->imaginary << "i"; // xi
         // Вывод действительного числа со знаком "+"
-        if (complex->real >= 0) ofstr << "+" << complex->real << "]" << std::endl;
-        else ofstr << complex->real << "]" << std::endl; // Со знаком "-"
+        if (complex->real >= 0) ofstr << "+" << complex->real << " " << complex->measure << "]" << std::endl;
+        else ofstr << complex->real << " " << complex->measure << "]" << std::endl; // Со знаком "-"
     }
 
     // Приведение каждого значения к действительному числу, эквивалентному записанному.

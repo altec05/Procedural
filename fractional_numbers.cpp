@@ -9,8 +9,8 @@ namespace variant9123 {
         // Вывод комплексного числа в виде x/y
         ofstr << "(" << ToDouble(fract) << ") "; // Вывод числителя
         ofstr << fract->numerator << "/"; // Вывод числителя
-        if(fract->denominator >= 0) ofstr << fract->denominator << "]" << std::endl; // Вывод положительного знаменателя
-        else ofstr << "(" << fract->denominator << ")]" << std::endl; // Вывод знаменателя в скобках
+        if(fract->denominator >= 0) ofstr << fract->denominator << " " << fract->measure << "]" << std::endl; // Вывод положительного знаменателя
+        else ofstr << "(" << fract->denominator << ") " << fract->measure << "]" << std::endl; // Вывод знаменателя в скобках
     }
 
     numbers *InFractional(std::ifstream &ifstr) {

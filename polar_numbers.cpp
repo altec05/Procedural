@@ -11,8 +11,12 @@ namespace variant9123 {
     }
 
     void OutPolar(polar_numbers *polar, std::ofstream &ofstr) {
-        ofstr << "[POLAR NUMBER = ";
-        ofstr << polar->angle << ";" << polar->radius << "]" << std::endl;
+        ofstr << "[POLAR NUMBER = (" << ToDouble(polar) << ") ";
+        ofstr << polar->angle << ";" << polar->radius <<  " " << polar->measure << "]" << std::endl;
+    }
+
+    double variant9123::ToDouble(polar_numbers *polar) {
+        return polar->radius*sin(polar->angle);
     }
 
 }

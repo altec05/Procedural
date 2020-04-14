@@ -1,0 +1,17 @@
+[COMPLEX NUMBER = (3.35321) -2.999i-1.5 сантиметры]
+[FRACTIONAL NUMBER = (0.4) -2/(-5) кг]
+[COMPLEX NUMBER = (123) 123i+0 yards]
+[COMPLEX NUMBER = (1.50001) 1.5i+0.005 meters]
+[FRACTIONAL NUMBER = (-2.4) -12/5 dollars]
+[POLAR NUMBER = (2.2564) 0.151;15 этажи]
+-----------Sorted-----------
+[FRACTIONAL NUMBER = (-2.4) -12/5 dollars]
+[FRACTIONAL NUMBER = (0.4) -2/(-5) кг]
+[COMPLEX NUMBER = (1.50001) 1.5i+0.005 meters]
+[POLAR NUMBER = (2.2564) 0.151;15 этажи]
+[COMPLEX NUMBER = (3.35321) -2.999i-1.5 сантиметры]
+[COMPLEX NUMBER = (123) 123i+0 yards]
+----------No complex writing---------
+[FRACTIONAL NUMBER = (-2.4) -12/5 dollars]
+[FRACTIONAL NUMBER = (0.4) -2/(-5) кг]
+[POLAR NUMBER = (2.2564) 0.151;15 этажи]

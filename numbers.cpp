@@ -34,6 +34,8 @@ namespace variant9123 {
                 return ToDouble((complex_numbers*)num);
             case types::FRACTION:
                 return ToDouble((fractional_numbers*)num);
+            case types::POLAR:
+                return ToDouble((polar_numbers*)num);
             default:
                 return 0;
         }

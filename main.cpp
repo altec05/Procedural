@@ -1,10 +1,18 @@
+#include "gtest/gtest.h"
 #include "numbers.h"
 #include "container.h"
 
+const bool is_testing = true;
+
+using namespace testing;
 using namespace std;
 
 int main(int argc, char* argv[]) {
-    // Если некорректно введены аргументы
+    if(is_testing) {
+        InitGoogleTest();
+        RUN_ALL_TESTS();
+        return 0;
+    }
     if(argc !=3) {
         cout << "incorrect command line! " << endl
              << "Waited: command in_file out_file"

@@ -15,7 +15,14 @@ namespace variant9123 {
 
     numbers *InFractional(std::ifstream &ifstr) {
         fractional_numbers *temp = new fractional_numbers; // Создаем экземпляр структуры
-        ifstr >> temp->numerator >> temp->denominator; // Считываем числитель и знаменатель
+        if(ifstr.eof()) return nullptr;
+        ifstr >> temp->numerator;
+        if(ifstr.eof()) return nullptr;
+        ifstr >> temp->denominator; // Считываем числитель и знаменатель
+        if(temp->denominator == 0) {
+            std::cout << "Error: division by zero!" << std::endl;
+            return nullptr;
+        }
         if(!ifstr.eof()) ifstr.get(); // Переход на новую строку
         return (numbers*) temp; // Перевод указателя под numbers*
     }

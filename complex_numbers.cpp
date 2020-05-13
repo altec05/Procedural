@@ -5,7 +5,10 @@ namespace variant9123 {
     // Считывание и вывод комплексных чисел
     numbers *InComplex(std::ifstream &ifstr) {
         complex_numbers *temp = new complex_numbers; // Создаем экземпляр структуры
-        ifstr >> temp->real >> temp->imaginary; // Считываем мнимую и действительную часть
+        if(ifstr.eof()) return nullptr;
+        ifstr >> temp->real;
+        if(ifstr.eof()) return nullptr;
+        ifstr >> temp->imaginary; // Считываем мнимую и действительную часть
         if (!ifstr.eof()) ifstr.get(); // Переход на новую строку
         return (numbers *) temp; // Перевод указателя под numbers*
     }

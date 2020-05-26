@@ -4,10 +4,13 @@
 namespace variant9123 {
     // Считывание и вывод комплексных чисел
     numbers *InPolar(std::ifstream &ifstr) {
+        bool bad_flag = false;
         polar_numbers *temp = new polar_numbers; // Создаем экземпляр структуры
         if(ifstr.eof()) return nullptr;
         ifstr >> temp->angle;
         if(ifstr.eof()) return nullptr;
+        if(ifstr.fail()) bad_flag = true;
+        if(ifstr.eof() || bad_flag) return nullptr;
         ifstr >> temp->radius; // Считываем мнимую и действительную часть
         if (!ifstr.eof()) ifstr.get(); // Переход на новую строку
         return (numbers *) temp; // Перевод указателя под numbers*

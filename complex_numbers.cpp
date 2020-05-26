@@ -4,12 +4,16 @@
 namespace variant9123 {
     // Считывание и вывод комплексных чисел
     numbers *InComplex(std::ifstream &ifstr) {
+        bool bad_flag = false;
         complex_numbers *temp = new complex_numbers; // Создаем экземпляр структуры
         if(ifstr.eof()) return nullptr;
+        if(ifstr.fail()) bad_flag = true;
         ifstr >> temp->real;
-        if(ifstr.eof()) return nullptr;
+        if(ifstr.eof() || bad_flag) return nullptr;
         ifstr >> temp->imaginary; // Считываем мнимую и действительную часть
-        if (!ifstr.eof()) ifstr.get(); // Переход на новую строку
+        if(ifstr.fail()) bad_flag = true;
+        if (!ifstr.eof() && !bad_flag) ifstr.get(); // Переход на новую строку
+        else return nullptr;
         return (numbers *) temp; // Перевод указателя под numbers*
     }
 

@@ -63,6 +63,7 @@ namespace variant9123 {
                     break;
             }
         }
+        c.len = 0;
     }
 
     void Sort(numbers_array &c) {

@@ -11,12 +11,24 @@ namespace variant9123 {
         ifstr.getline(data, 255); // Считываем строку
         if (std::string(data) == "1") { // Если вводим комплексное число
             element = InComplex(ifstr); // Считываем комплексное число и сохраняем указатель
+            if(element == nullptr) {
+                std::cout << "Error! Wrong object data." << std::endl;
+                return nullptr;
+            }
             element->num_type = types::COMPLEX;
         } else if (std::string(data) == "2") { // Если вводим дробь
             element = InFractional(ifstr); // Считываем дробное число и сохраняем указатель
+            if(element == nullptr) {
+                std::cout << "Error! Wrong object data." << std::endl;
+                return nullptr;
+            }
             element->num_type = types::FRACTION;
         } else if (std::string(data) == "3") { // Если вводим дробь
             element = InPolar(ifstr); // Считываем полярное число и сохраняем указатель
+            if(element == nullptr) {
+                std::cout << "Error! Wrong object data." << std::endl;
+                return nullptr;
+            }
             element->num_type = types::POLAR;
         } else { // Если тип не найден
             delete element;

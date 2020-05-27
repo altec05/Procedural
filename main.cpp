@@ -20,6 +20,7 @@ int main(int argc, char* argv[]) {
     variant9123::In(c, ifst);
     // Вывод в файл
     variant9123::Out(c, ofst);
+    variant9123::OutPairs(c, ofst);
     // Очистка контейнера
     variant9123::Clear(c);
     cout << "Program ended"<< endl;

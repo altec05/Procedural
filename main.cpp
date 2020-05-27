@@ -30,14 +30,7 @@ int main(int argc, char* argv[]) {
         variant9123::In(c, ifst);
         // Вывод в файл
         variant9123::Out(c, ofst);
-        // Сортировка
-        variant9123::Sort(c);
-        ofst << "-----------Sorted-----------" << std::endl;
-        variant9123::Out(c, ofst);
-        // Вывод без Complex
-        ofst << "----------No complex writing---------" << endl;
-        variant9123::Out(c, ofst, variant9123::types::COMPLEX);
-        // Очистка контейнера
+        variant9123::OutPairs(c, ofst);
         variant9123::Clear(c);
         cout << "Program ended" << endl;
     } else  {

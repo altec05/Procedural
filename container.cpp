@@ -78,4 +78,66 @@ namespace variant9123 {
         }
     }
 
+    void OutPairs(numbers_array &c, std::ofstream &ofstr) {
+        ofstr << "-----Printing-pairs-with-multimethod-----" << std::endl;
+        for(int i = 0; i < c.len-1; i++) {
+            for(int j = 0; j < c.len; j++) {
+                if(i == j) continue;
+                switch(c.arr[i]->num_type) {
+                    case types::COMPLEX:
+                        switch(c.arr[j]->num_type) {
+                            case types::COMPLEX:
+                                ofstr << "--complex-and-complex--" << std::endl;
+                                OutComplex((complex_numbers*)c.arr[j], ofstr);
+                                break;
+                            case types::POLAR:
+                                ofstr << "--complex-and-polar--" << std::endl;
+                                OutPolar((polar_numbers*)c.arr[j], ofstr);
+                                break;
+                            case types::FRACTION:
+                                ofstr << "--complex-and-fractional--" << std::endl;
+                                OutFractional((fractional_numbers*)c.arr[j], ofstr);
+                                break;
+                        }
+                        OutComplex((complex_numbers*)c.arr[i], ofstr);
+                        break;
+                    case types::POLAR:
+                        switch(c.arr[j]->num_type) {
+                            case types::COMPLEX:
+                                ofstr << "--polar-and-complex--" << std::endl;
+                                OutComplex((complex_numbers*)c.arr[j], ofstr);
+                                break;
+                            case types::POLAR:
+                                ofstr << "--polar-and-polar--" << std::endl;
+                                OutPolar((polar_numbers*)c.arr[j], ofstr);
+                                break;
+                            case types::FRACTION:
+                                ofstr << "--polar-and-fractional--" << std::endl;
+                                OutFractional((fractional_numbers*)c.arr[j], ofstr);
+                                break;
+                        }
+                        OutPolar((polar_numbers*)c.arr[i], ofstr);
+                        break;
+                    case types::FRACTION:
+                        switch(c.arr[j]->num_type) {
+                            case types::COMPLEX:
+                                ofstr << "--fractional-and-complex--" << std::endl;
+                                OutComplex((complex_numbers*)c.arr[j], ofstr);
+                                break;
+                            case types::POLAR:
+                                ofstr << "--fractional-and-polar--" << std::endl;
+                                OutPolar((polar_numbers*)c.arr[j], ofstr);
+                                break;
+                            case types::FRACTION:
+                                ofstr << "--fractional-and-fractional--" << std::endl;
+                                OutFractional((fractional_numbers*)c.arr[j], ofstr);
+                                break;
+                        }
+                        OutFractional((fractional_numbers*)c.arr[i], ofstr);
+                        break;
+                }
+            }
+        }
+    }
+
 }

@@ -25,6 +25,7 @@ namespace variant9123 {
     void In(numbers_array &c, std::ifstream &ifstr);
     void Sort(numbers_array &c);
     void Out(numbers_array &c, std::ofstream &ofstr, types ignore = types::NONE);
+    void OutPairs(numbers_array &c, std::ofstream &ofstr);
 }
 
 #endif //CONT_H

@@ -80,6 +80,10 @@ namespace variant9123 {
 
     void OutPairs(numbers_array &c, std::ofstream &ofstr) {
         ofstr << "-----Printing-pairs-with-multimethod-----" << std::endl;
+        if(c.len == 0) {
+            std::cout << "No elements!" << std::endl;
+            return;
+        }
         for(int i = 0; i < c.len-1; i++) {
             for(int j = 0; j < c.len; j++) {
                 if(i == j) continue;
